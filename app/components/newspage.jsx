@@ -13,7 +13,6 @@ var Newspage = React.createClass({
         var that = this;
         Newsapi.getNews(provider).then(function(result) {
           that.setState((news_articles) => ({ news_articles: that.state.news_articles.concat(result) }));
-          console.log(that.state.news_articles);
         }, function(errorMessage) {
 
             alert(errorMessage);
